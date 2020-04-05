@@ -4,7 +4,7 @@
 ## Author: Pajlada
 ## DefaultState: enabled
 ## LoadOnDemand: 0
-## Version: 1.0.0
+## Version: 1.0.1
 
 Libs\LibStub\LibStub.lua
 embeds.xml
