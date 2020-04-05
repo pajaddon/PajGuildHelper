@@ -1,0 +1,12 @@
+## Interface: 11304
+## Title: PajGuildHelper
+## Notes: random helper utilities for guild leaders/officers
+## Author: Pajlada
+## DefaultState: enabled
+## LoadOnDemand: 0
+## Version: 1.0.0
+
+Libs\LibStub\LibStub.lua
+embeds.xml
+helpers.lua
+main.lua
