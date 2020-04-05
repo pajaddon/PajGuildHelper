@@ -11,11 +11,26 @@ end
 local function PGHDump(commands, command_i)
     local LibTextDump = LibStub("LibTextDump-1.0")
     local numMembers = GetNumGuildMembers()
-    local interface = LibTextDump:New("Guild member dump(" .. numMembers .. " members")
+    local interface = LibTextDump:New("Guild member dump(" .. numMembers .. " members)")
+    local currentTime = time()
     for i=1,numMembers do
-        name, rank, rankIndex, level, class, _, note, officerNote = GetGuildRosterInfo(i)
+        name, rankName, rankIndex, level, class, _, note, officerNote = GetGuildRosterInfo(i)
         name = gsub(name, "%-[^|]+", "")
-        interface:AddLine(name .. "\t" .. rankIndex .. "\t" .. rank .. "\t" .. level .. "\t" .. class .. "\t" .. note .. "\t" .. officerNote)
+        years, months, days, hours = GetGuildRosterLastOnline(i)
+        years, months, days, hours = years and years or 0, months and months or 0, days and days or 0, hours and hours or 0
+        local timeOfflineSeconds = ((((years*12)+months)*30.5+days)*24+hours)*3600
+        local lastOnline = currentTime - timeOfflineSeconds
+        local lastOnlineString = date("%Y-%m-%d", lastOnline)
+        -- Remove any line starting with .. below to remove any of the fields
+        interface:AddLine(name
+            .. "\t" .. rankIndex
+            .. "\t" .. rankName
+            .. "\t" .. level
+            .. "\t" .. class
+            .. "\t" .. note
+            .. "\t" .. officerNote
+            .. "\t" .. lastOnlineString
+        )
     end
     interface:Display()
 end
