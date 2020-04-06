@@ -14,6 +14,9 @@ jobs:
       with:
         submodules: true
 
+    - name: make script executable
+      run: chmod +x utils/packager/release.sh
+
     - name: Create Retail Package
       run: ./utils/packager/release.sh
       env:
