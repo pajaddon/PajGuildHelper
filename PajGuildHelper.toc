@@ -1,4 +1,10 @@
+#@retail@
+## Interface: 80205
+#@end-retail@
+#@non-retail@
 ## Interface: 11304
+#@end-non-retail@
+## X-Curse-Project-ID: 373461
 ## Title: PajGuildHelper
 ## Notes: random helper utilities for guild leaders/officers
 ## Author: Pajlada
