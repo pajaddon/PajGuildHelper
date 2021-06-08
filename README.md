@@ -18,7 +18,7 @@ Current fields included:
 - Note
 - Officers note
 - Last online date
-- Zone (positon of the player, or last known position of the player if they're logged off)
+- Zone (position of the player, or last known position of the player if they're logged off. If no position is found, we print N/A in this column)
 
 If you don't want one of those fields included in your dump, you can open up the main.lua file and just remove one of the lines in the PGHDump function. Just search for "Remove any line"
 

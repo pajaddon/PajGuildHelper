@@ -30,7 +30,7 @@ local function PGHDump(commands, command_i)
             .. "\t" .. note
             .. "\t" .. officerNote
             .. "\t" .. lastOnlineString
-            .. "\t" .. zone
+            .. "\t" .. (zone or "N/A")
         )
     end
     interface:Display()
