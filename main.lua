@@ -14,7 +14,7 @@ local function PGHDump(commands, command_i)
     local interface = LibTextDump:New("Guild member dump(" .. numMembers .. " members)")
     local currentTime = time()
     for i=1,numMembers do
-        name, rankName, rankIndex, level, class, _, note, officerNote = GetGuildRosterInfo(i)
+        name, rankName, rankIndex, level, class, zone, note, officerNote = GetGuildRosterInfo(i)
         name = gsub(name, "%-[^|]+", "")
         years, months, days, hours = GetGuildRosterLastOnline(i)
         years, months, days, hours = years and years or 0, months and months or 0, days and days or 0, hours and hours or 0
@@ -30,6 +30,7 @@ local function PGHDump(commands, command_i)
             .. "\t" .. note
             .. "\t" .. officerNote
             .. "\t" .. lastOnlineString
+            .. "\t" .. zone
         )
     end
     interface:Display()
