@@ -1,7 +1,9 @@
-## Interface: 90005
-## Interface-BCC: 20502
-## Interface-Classic: 11307
+## Interface: 90200
+## Interface-BCC: 20504
+## Interface-Classic: 11403
 ## X-Curse-Project-ID: 373461
+## X-WoWI-ID: 26304
+## X-Wago-ID: WqKQaDKx
 ## Title: PajGuildHelper
 ## Notes: random helper utilities for guild leaders/officers
 ## Author: Pajlada
